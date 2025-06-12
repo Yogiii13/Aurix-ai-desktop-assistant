@@ -1,0 +1,93 @@
+system:
+  name: "AI Desktop Assistant"
+  version: "0.1.0"
+  log_level: "logs\app.log"
+  log_dir: "data/logs"
+  cache_dir: "data/cache"
+  user_prefs: "data/user_pref.json"
+
+ai:
+  model_management:
+    auto_start_ollama: true
+    preload_models: false
+    retry_attempts: 3
+    memory_optimization: true
+    conversation_history_limit: 10
+    max_tokens: 512
+    context_length: 2048
+    timeout: 45
+
+  primary:
+    provider: "ollama"
+    base_url: "http://localhost:11434"
+    model: "tinyllama:1.1b"
+    context_length: 4096
+    max_tokens: 512
+    temperature: 0.7
+    system_prompt_template: "default.txt"
+    timeout: 30  
+  
+  fallback:
+    provider: "ollama"
+    base_url: "http://localhost:11434"
+    model: "deepseek-r1:1.5b"
+    context_length: 2048  
+    max_tokens: 512       
+    temperature: 0.7
+    system_prompt_template: "default.txt"
+    timeout: 45   
+
+voice:
+  enabled: "${ENABLE_VOICE}"
+  
+  wake_word:
+    engine: "vosk"
+    wake_word:
+    model_path: "model/vosk-model-small-en-us-0.15"
+    trigger_phrase: "hey assistant"
+    sensitivity: 0.7
+  
+  stt:
+    engine: "vosk"
+    model_path: "model/vosk-model-small-en-us-0.15"
+    language: "en-US"
+    sample_rate: 16000
+    timeout: 5
+  
+  tts:
+    engine: "pyttsx3"  # Options: pyttsx3, elevenlabs
+    voice: "default"
+    rate: 175
+    volume: 1.0
+    # api_key: "sk_211393ebf95c8115a330dc9fd8223b0b86d2658dc89ee5af"
+    # voice_id: "${ELEVENLABS_VOICE_ID}"
+
+ui:
+  theme: "${UI_THEME}"  # Options: light, dark, system
+  font_size: 12
+  opacity: "${UI_OPACITY}"
+  always_on_top: "${UI_ALWAYS_ON_TOP}"
+  start_minimized: false
+  hotkeys:
+    toggle_window: "Alt+Space"
+    start_listening: "Alt+L"
+  
+  notification:
+    enabled: true
+    sound: true
+    visual: true
+
+automation:
+  app_paths:
+    browser: "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe"
+    notepad: "notepad.exe"
+    calculator: "calc.exe"
+  
+  search_engines:
+    default: "google"
+    google: "https://www.google.com/search?q="
+    bing: "https://www.bing.com/search?q="
+  
+  system_commands:
+    allowed: true
+    blacklist: ["shutdown", "format", "del"]
