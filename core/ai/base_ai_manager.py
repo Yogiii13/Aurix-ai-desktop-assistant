@@ -519,20 +519,14 @@ class BaseAIManager:
         """Handle web search commands"""
         if not self.web_actions:
             return "Web actions are not available. Please check internet connection."
-        
+    
         try:
             query = user_input[7:].strip()  # Remove "search "
             if not query:
                 return "Please specify a search query."
-                
-            results = self.web_actions.search(query)
-            if results:
-                response = "Here are the top search results:\n\n"
-                for i, result in enumerate(results, 1):
-                    response += f"{i}. {result['title']}\n   {result['link']}\n   {result['snippet']}\n\n"
-                return response
-            else:
-                return "Sorry, I couldn't find any results for that search."
+            
+            self.web_actions.search(query)
+            return f"Opened your browser to search for '{query}'."
         except Exception as e:
             logger.error(f"Error with web search: {e}")
             return f"Web search failed: {str(e)}"
