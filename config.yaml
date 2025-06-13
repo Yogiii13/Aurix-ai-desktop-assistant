@@ -1,7 +1,7 @@
 system:
   name: "AI Desktop Assistant"
   version: "0.1.0"
-  log_level: "logs\app.log"
+  log_level: "logs/app.log"
   log_dir: "data/logs"
   cache_dir: "data/cache"
   user_prefs: "data/user_pref.json"
