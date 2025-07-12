@@ -58,14 +58,14 @@
 
 ## ⚙️ Installation Guide
 
-### 1️⃣ Clone the Repo
+###  Clone the Repo
 
 ```bash
 git clone https://github.com/Yogiii13/Aurix-ai-desktop-assistant.git
 cd aurix-ai-desktop-assistant
 ```
 
-### 2️⃣ Create a Virtual Environment
+###  Create a Virtual Environment
 
 ```bash
 python -m venv venv
@@ -74,13 +74,79 @@ source venv/bin/activate        # Mac/Linux
 venv\Scripts\activate           # Windows
 ```
 
-### 3️⃣ Install Dependencies
+###  Install Dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
+## 🦙 Ollama Configuration (Local LLM)
 
-### 4️⃣ Set Environment Variables
+Aurix supports running open-source language models locally using [Ollama](https://ollama.com/). This lets you run LLMs on your own machine for privacy, speed, and offline use.
+
+### 1️⃣ Install Ollama
+
+- Download Ollama from [ollama.com/download](https://ollama.com/download) and install it following instructions for your OS.
+
+### 2️⃣ Pull a Supported Model
+
+This project is tested with the following models:
+- `gemma:1b`
+- `tinyllama:1.1b`
+- `deepseek-r1:1.5b`
+
+You can use any model supported by Ollama. To pull a model, run (replace with desired model name):
+
+```bash
+ollama pull gemma:1b
+ollama pull tinyllama:1.1b
+ollama pull deepseek-r1:1.5b
+```
+
+Explore more models at [ollama.com/library](https://ollama.com/library).
+
+### 3️⃣ Start Ollama
+
+Ollama usually runs automatically after installation. If not, you can start it manually:
+
+```bash
+ollama serve
+```
+
+This starts the Ollama server at `http://localhost:11434`.
+
+### 4️⃣ Configure Aurix to Use Ollama
+
+You need to tell Aurix which model to use by updating your `config.yaml` and `.env` files.
+
+#### Example `config.yaml` section
+
+```yaml
+llm:
+  provider: ollama
+  model: gemma:1b    # or tinyllama:1.1b, deepseek-r1:1.5b, etc.
+  api_base: http://localhost:11434
+```
+
+#### Example `.env` entries
+
+```
+LLM_PROVIDER=ollama
+LLM_MODEL=gemma:1b           # or tinyllama:1.1b, deepseek-r1:1.5b, etc.
+LLM_API_BASE=http://localhost:11434
+```
+
+You can switch models anytime by:
+- Pulling the new model with `ollama pull <model-name>`.
+- Updating the `model` value in your `config.yaml` and `.env` files.
+
+---
+
+**Note:**  
+- Make sure the model you specify in your config has been pulled with `ollama pull`.
+- Ollama must be running before you launch Aurix.
+- For more advanced Ollama settings, see [Ollama documentation](https://ollama.com/docs/).
+
+###  Set Environment Variables
 
 Create a `.env` file with your keys:
 
@@ -88,7 +154,7 @@ Create a `.env` file with your keys:
 ELEVEN_LABS_API_KEY=your_api_key_here
 ```
 
-### 5️⃣ Launch Aurix
+###  Launch Aurix
 
 ```bash
 python main.py
