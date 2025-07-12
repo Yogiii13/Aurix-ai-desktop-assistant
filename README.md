@@ -162,25 +162,60 @@ python main.py
 
 ---
 
-## 🧪 Configuration
+## ⚙️ Technical Requirements
 
-Aurix uses a `config.yaml` file to customize behavior:
+### 🧰 Core Libraries
+- `PyQt5==5.15.11` – GUI toolkit  
+- `pywin32==307` – Windows-specific APIs  
+- `SpeechRecognition==3.10.0` – Voice recognition  
+- `ollama==0.1.0` – Text-to-speech  
+- `python-dotenv==1.0.0` – Environment management  
+- `PyYAML==6.0.1` – YAML config parsing  
+- `beautifulsoup4==4.10.0` – HTML parsing  
+- `requests==2.26.0` – HTTP library  
 
-```yaml
-voice:
-  engine: elevenlabs
-  language: en
-commands:
-  open_browser: "C:/Program Files/Google/Chrome/Application/chrome.exe"
-```
+### 💻 System Control
+- `pycaw==20220416` – Audio control  
+- `screen_brightness_control==0.14.1` – Adjust screen brightness  
 
-🎯 Customize:
-- Default voice
-- App paths
-- Trigger phrases
-- Responses
+### 🗣️ Voice Components
+- `pyttsx3==2.98` – TTS engine  
+- `PyAudio==0.2.14` – Audio input/output  
+- `elevenlabs==0.2.26` – Realistic synthetic voices  
+- `pygame==2.6.1` – Game engine support  
+
+### 🔍 Utilities
+- `numpy==1.24.3` – Numerical processing  
+- `sip==6.11.0` – C++ access  
+- `google-search-results==2.4.2` – Google search API  
+
+### 🧩 Optional
+- `webview==0.1.5` – Embedded browser view  
+- `psutil==5.9.5` – Process/system monitoring  
 
 ---
+
+## ⚙️ Configuration
+
+Customize Aurix with the `config.yaml` file to define:
+- AI model settings
+- Voice preferences
+- Trigger words and responses
+- Application launch commands
+
+---
+
+## 💡 Usage Tips
+
+- Launch with:
+  ```bash
+  python main.py
+  ```
+- Use voice or type in the GUI to give commands.
+- Run in **headless mode** for a CLI experience or enable the GUI for richer interaction.
+
+---
+
 
 ## 💡 How to Use
 
