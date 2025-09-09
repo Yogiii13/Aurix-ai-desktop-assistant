@@ -21,7 +21,15 @@
 > Aurix is a **voice-enabled AI assistant** for your desktop. It listens, understands, and acts — using natural language commands. Whether you want to **launch apps, control system settings, search the web**, or hear responses in a natural voice — Aurix has you covered.
 
 ---
+## 🖼️ Demo Screenshot
 
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/39839898/239741685-3f61f1ec-27e7-4c1f-94a4-4e2e1e7a6ba0.png" alt="Aurix AI Desktop Assistant Screenshot" width="700"/>
+</p>
+
+*Aurix in action: GUI with voice/text chat, system controls, and real-time responses.*
+
+---
 ## 🧠 Core Features
 
 | Category             | Description                                                                 |
