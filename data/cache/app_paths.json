@@ -1,0 +1,15 @@
+{
+  "acrobat": "C:\\Program Files\\Adobe\\Acrobat DC\\Acrobat\\Acrobat.exe",
+  "acrobatinfo": "C:\\Program Files\\Adobe\\Acrobat DC\\Acrobat\\AcrobatInfo.exe",
+  "afterfx": "C:\\Program Files\\Adobe\\Adobe After Effects 2023\\Support Files\\AfterFX.exe",
+  "autodeskdesktopapp": "C:\\Program Files (x86)\\Autodesk\\Autodesk Desktop App\\AutodeskDesktopApp.exe",
+  "chrome": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+  "illustrator": "C:\\Program Files\\Adobe\\Adobe Illustrator 2021\\Support Files\\Contents\\Windows\\Illustrator.exe",
+  "msedge": "D:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe",
+  "msoadfsb": "C:\\Program Files\\Microsoft Office\\Root\\Office16\\msoadfsb.exe",
+  "msoasb": "C:\\Program Files\\Microsoft Office\\Root\\Office16\\msoasb.exe",
+  "pwsh": "C:\\Program Files\\PowerShell\\7\\pwsh.exe",
+  "sdxhelper": "C:\\Program Files\\Microsoft Office\\Root\\Office16\\SDXHelper.exe",
+  "unifiedplugininstalleragent": "C:\\Program Files\\Common Files\\Adobe\\Adobe Desktop Common\\RemoteComponents\\UPI\\UnifiedPluginInstallerAgent\\UnifiedPluginInstallerAgent.exe",
+  "vlc": "C:\\Program Files (x86)\\VideoLAN\\VLC\\vlc.exe"
+}

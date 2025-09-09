@@ -23,13 +23,17 @@
 ---
 ## 🖼️ Demo Screenshot
 
-<p align="center">
-  <img src="https://user-images.githubusercontent.com/39839898/239741685-3f61f1ec-27e7-4c1f-94a4-4e2e1e7a6ba0.png" alt="Aurix AI Desktop Assistant Screenshot" width="700"/>
-</p>
-
 *Aurix in action: GUI with voice/text chat, system controls, and real-time responses.*
 
+<p align="center">
+  <img src="ui/assets/DEMO-1.png" alt="Demo 1" width="350"/>
+  <img src="ui/assets/DEMO-2.png" alt="Demo 2" width="350"/>
+  <img src="ui/assets/DEMO-3.png" alt="Demo 3" width="350"/>
+</p>
+
+*Various Aurix UI panels and features in action.*
 ---
+
 ## 🧠 Core Features
 
 | Category             | Description                                                                 |
